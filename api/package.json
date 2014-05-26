@@ -1,0 +1,26 @@
+{
+  "name": "ezpf-api",
+  "version": "0.0.0",
+  "description": "EZ Part Finder RESTful API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcnovus/ez-part-finder.git"
+  },
+  "author": "Arcnovus",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/arcnovus/ez-part-finder/issues"
+  },
+  "homepage": "https://github.com/arcnovus/ez-part-finder",
+  "dependencies": {
+    "express": "^4.3.1",
+    "morgan": "^1.1.1",
+    "body-parser": "^1.2.0",
+    "cheerio": "^0.16.0",
+    "mongoose": "^3.8.11"
+  }
+}
