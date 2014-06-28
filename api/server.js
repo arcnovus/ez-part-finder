@@ -6,6 +6,7 @@
     var express = require('express'),
         bodyParser = require('body-parser'),
         morgan = require('morgan'),
+        brandService = require('./modules/brands/brand-service'),
         app = express(),
         router = express.Router(),
         onBrowse,
@@ -28,6 +29,8 @@
 
     router.get('/', onBrowse);
     router.get('/api', onBrowseApi);
+    router.post('/api/brands', brandService.add);
+
 
     app.listen('4444');
 

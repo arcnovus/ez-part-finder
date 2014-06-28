@@ -22,5 +22,9 @@
     "body-parser": "^1.2.0",
     "cheerio": "^0.16.0",
     "mongoose": "^3.8.11"
+  },
+  "devDependencies": {
+    "frisby": "~0.8.1",
+    "gulp-jasmine": "~0.2.0"
   }
 }
