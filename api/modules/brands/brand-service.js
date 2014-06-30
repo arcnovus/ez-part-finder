@@ -1,16 +1,32 @@
-/*jslint node: true */
+/*jslint node: true, nomen: true */
 (function (global) {
 
     'use strict';
 
+
     var mongoose = require('mongoose'),
-        brandManager = require('./brand-manager');
+        Brand = require('./Brand'),
+        config = require('./../../config'),
+        monstat = require('./../common/monstat'),
+        rest = require('./../common/arc-rest'),
+        onAddBrandSuccess,
+        db,
+        onBrandCreate,
+        addBrand;
 
+    exports.add = function addBrand(req, res, next) {
+        var brand = req.body;
+        Brand.create(brand, function (err, saved) {
+            if (err) {
+                rest.handleError(err, req, res);
+            } else {
+                console.log('saved');
+                console.log(req.body.name);
+                console.log(saved);
+                rest.handleSuccess(req, res, saved);
+            }
+        });
 
-    exports.add = function addBrand(req, res) {
-        brandManager.add(req.body);
-        res.type('application/json');
-        res.json(req.body);
     };
 
 }(this));
