@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "test": "jasmine-node tests --verbose --autotest",
-        "watch": "nodemon --ignore 'tests/**/*'"
+        "watch": "nodemon --ignore 'tests/*'"
     },
     "repository": {
         "type": "git",
