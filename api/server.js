@@ -43,6 +43,7 @@
     router.get('/', onBrowse);
     router.get('/api', onBrowseApi);
     router.post('/api/brands', brandService.add);
+    router.delete('/api/brands/:name', brandService.delete);
 
     app.use(rest.handleError);
 

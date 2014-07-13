@@ -15,7 +15,7 @@
     exports.handleError = function handleError(err, req, res, next) {
         var exception = {},
             statusCode = 500;
-        logger.info(err);
+        logger.info("error: " + err);
         if (environment !== 'production') {
             exception.innerError = err;
         }

@@ -26,7 +26,19 @@
                 rest.handleSuccess(req, res, saved);
             }
         });
+    };
 
+    exports.delete = function deleteBrand(req, res, next) {
+        var name = req.params.name;
+        Brand.remove("{_id: " + name + "}", function (err) {
+            if (err) {
+                rest.handleError(err, req, res);
+            } else {
+                console.log('deleted');
+                console.log(req.body.name);
+                rest.handleSuccess(req, res);
+            }
+        });
     };
 
 }(this));

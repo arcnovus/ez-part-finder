@@ -4,7 +4,7 @@
     "description": "EZ Part Finder RESTful API",
     "main": "server.js",
     "scripts": {
-        "test": "jasmine-node tests --verbose --autotest",
+        "test": "jasmine-node tests --autotest",
         "watch": "nodemon --ignore 'tests/*'"
     },
     "repository": {

@@ -5,7 +5,7 @@
     var frisby = require('frisby'),
         config = require('./../config.js');
 
-    describe("Testing the brand service", function () {
+    describe("The brand service", function () {
 
         var brand = {},
             url = config.baseUrl + "/api/brands";
@@ -30,5 +30,13 @@
                     .expectJSON(brand)
                     .toss();
             });
+
+        it("should delete a brand", function () {
+
+            frisby.create("delete brand")
+                .delete(url + "/" + brand.name.toUpperCase())
+                .expectStatus(200)
+                .toss();
+        });
     });
 }(this));

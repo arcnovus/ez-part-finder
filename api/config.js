@@ -4,13 +4,13 @@
     'use strict';
 
     var settings = {},
-        target = process.env.TEST_TARGET || 'local',
-        port = process.env.PORT || '4444';
+        target = process.env.TEST_TARGET || "local",
+        port = process.env.PORT || "4444";
 
 
     settings.local = {
         baseUrl: "http://localhost:" + port + "/",
-        connString: "mongodb://ezdbuser:ezpwd@localhost:27017/ezpfdb"
+        connString: "mongodb://ezdbuser:ezpwd@ds061258.mongolab.com:61258/ezpfdb" // "mongodb://ezdbuser:ezpwd@localhost:27017/ezpfdb"
     };
 
     settings.remote = {
